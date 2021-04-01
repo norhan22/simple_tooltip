@@ -1,0 +1,39 @@
+//////////////////// 
+// vars
+/////////////////////
+$color-dark:#000;
+
+//////////////////// 
+// tooltips
+/////////////////////
+.tooltip {
+    position: absolute;
+    z-index: 9;
+    background: $color-dark;
+    color: #fff;
+    padding: 7px;
+    font-size: 12px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16),
+        0 2px 5px 0 rgba(0, 0, 0, .23);
+
+    span {
+        text-transform: capitalize;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -8px;
+        width: 0;
+        height: 0;
+        border-top: solid 8px $color-dark;
+        border-left: solid 8px transparent;
+        border-right: solid 8px transparent;
+
+    }
+}
